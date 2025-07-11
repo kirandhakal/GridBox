@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GridBox/static/css/main.8d745542.css",
-    "main.js": "/GridBox/static/js/main.da5396d1.js",
-    "static/js/453.f18c81f8.chunk.js": "/GridBox/static/js/453.f18c81f8.chunk.js",
-    "index.html": "/GridBox/index.html",
-    "main.8d745542.css.map": "/GridBox/static/css/main.8d745542.css.map",
-    "main.da5396d1.js.map": "/GridBox/static/js/main.da5396d1.js.map",
-    "453.f18c81f8.chunk.js.map": "/GridBox/static/js/453.f18c81f8.chunk.js.map"
+    "main.css": "/BoxGame/static/css/main.d1ac16ee.css",
+    "main.js": "/BoxGame/static/js/main.6149565e.js",
+    "static/js/453.f18c81f8.chunk.js": "/BoxGame/static/js/453.f18c81f8.chunk.js",
+    "index.html": "/BoxGame/index.html",
+    "main.d1ac16ee.css.map": "/BoxGame/static/css/main.d1ac16ee.css.map",
+    "main.6149565e.js.map": "/BoxGame/static/js/main.6149565e.js.map",
+    "453.f18c81f8.chunk.js.map": "/BoxGame/static/js/453.f18c81f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d745542.css",
-    "static/js/main.da5396d1.js"
+    "static/css/main.d1ac16ee.css",
+    "static/js/main.6149565e.js"
   ]
 }
