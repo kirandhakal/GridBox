@@ -15,5 +15,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## 🚀 Live Demo
 
-👉 [View Live](https://https://github.com/kirandhakal/GridBox.git)
+👉 [View Live](https://kirandhakal.github.io/GridBox/)
 
