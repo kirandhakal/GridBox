@@ -1,29 +1,57 @@
-:root{
-  --primarycolor: #ffffff;
-  --gridcolor:#090999;
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: var(--primarycolor);
+/* App.css */
+.App {
+  text-align: center;
+  padding: 20px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(20, 1.5fr);
-  width: 100vw;
-  height: 100vh;
+.grid {
+  display: inline-block;
+  border: 2px solid #333;
+  margin-bottom: 20px;
 }
 
-.grid-box {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: white;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.row {
+  display: flex;
 }
 
-.grid-box.active {
-  background-color: var(--gridcolor);
- 
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* Indicate cells are clickable */
+}
+
+.score {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.red-button:hover {
+  background-color: darkred;
+}
+
+.restart-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.restart-button:hover {
+  background-color: darkgreen;
 }

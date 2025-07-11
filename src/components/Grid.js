@@ -1,45 +1,23 @@
-import React, { useEffect, useState } from "react";
-import GridBox from "./GridBox";
+import React from 'react';
+import Cell from './Cell';
+import './css/Grid.css';
 
-const Grid = ({ gridSize = 20, intervalMs = 800, activeDuration = 1000 }) => {
-  const totalBoxes = gridSize * gridSize;
-  const [activeBoxes, setActiveBoxes] = useState(new Set());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const count = Math.floor(Math.random() * 2) + 1; 
-      const newIndices = new Set();
-
-      while (newIndices.size < count) {
-        const randomIndex = Math.floor(Math.random() * totalBoxes);
-        newIndices.add(randomIndex);
-      }
-
-      setActiveBoxes((prev) => {
-        const updated = new Set(prev);
-        newIndices.forEach((i) => updated.add(i));
-        return updated;
-      });
-
-      setTimeout(() => {
-        setActiveBoxes((prev) => {
-          const updated = new Set(prev);
-          newIndices.forEach((i) => updated.delete(i));
-          return updated;
-        });
-      }, activeDuration);
-    }, intervalMs);
-
-    return () => clearInterval(interval);
-  }, [totalBoxes, intervalMs, activeDuration]);
-
+function Grid({ grid, onCellClick }) {
   return (
-    <div className="grid-container">
-      {Array.from({ length: totalBoxes }).map((_, idx) => (
-        <GridBox key={idx} isActive={activeBoxes.has(idx)} />
+    <div className="grid">
+      {grid.map((row, rowIndex) => (
+        <div key={rowIndex} className="row">
+          {row.map((color, colIndex) => (
+            <Cell
+              key={`${rowIndex}-${colIndex}`}
+              color={color}
+              onClick={() => onCellClick(rowIndex, colIndex)}
+            />
+          ))}
+        </div>
       ))}
     </div>
   );
-};
+}
 
 export default Grid;
